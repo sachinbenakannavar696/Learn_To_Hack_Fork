@@ -1,0 +1,57 @@
+Command Name: stat
+
+Description:
+stat is a Linux command used to display detailed information about a file
+or directory. It shows metadata such as file size, permissions, ownership,
+timestamps, and inode information, which is useful for system analysis,
+debugging, and forensics.
+
+Basic Syntax:
+stat [OPTIONS] FILE
+
+Example:
+stat file.txt
+
+Commonly Used Flags:
+
+-L, --dereference
+Displays information about the file a symbolic link points to,
+instead of the symbolic link itself.
+
+-f, --file-system
+Displays information about the filesystem where the file resides,
+rather than the file itself.
+
+-c, --format=FORMAT
+Allows custom output formatting.
+Example:
+stat -c "%s %y %n" file.txt
+(prints size, modification time, and filename)
+
+--printf=FORMAT
+Similar to --format, but does not print a newline automatically.
+
+-t, --terse
+Displays information in a concise, single-line format.
+Useful for scripting and automation.
+
+
+Additional Useful Flags:
+
+--help
+Displays help information about the stat command.
+
+--version
+Shows the version of the stat command.
+
+
+Common Use Cases:
+
+1. View detailed file metadata:
+stat file.txt
+
+2. Check filesystem details:
+stat -f /
+
+3. Custom formatted output for scripting:
+stat -c "%A %U %G %n" file.txt
