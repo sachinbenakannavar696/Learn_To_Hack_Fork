@@ -1,0 +1,16 @@
+`strace` is a command that traces system calls made by a program.
+
+It is commonly used in CTFs and cybersecurity to understand how a program
+interacts with the operating system, accesses files, executes commands,
+or fails due to permission issues.
+
+Syntax:
+strace [options] <command>
+
+Some flags commonly used alongside `strace`
+
+-> `-o <file>` - writes the trace output to a file.
+-> `-f` - traces child processes created by the program.
+-> `-e trace=<syscall>` - traces specific system calls only.
+-> `-p <pid>` - attaches strace to a running process.
+-> `-c` - shows a summary of system call statistics.
